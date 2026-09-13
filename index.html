@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SystemError-404 - Developer Portfolio</title>
+    <title>Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -26,7 +26,7 @@
 
         header {
             text-align: center;
-            color: white;
+            color: #667eea;
             margin-bottom: 60px;
             animation: fadeIn 0.8s ease-in;
         }
@@ -163,57 +163,577 @@
             margin-left: 8px;
             font-weight: 600;
         }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            background-color: rgba(255,255,255,0.95);
+            width: 100vw;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 18px 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #0e6d92;
+        }
+
+        .logo span {
+            color: #667eea;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            opacity: 0.9;
+        }
+
+        nav ul li a:hover {
+            color: #0e6d92;
+            transition: 0.3s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffffff 0%, #dfeeff 100%);
+            color: #23395d;
+            padding: 12px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .btn:hover {
+            background:#667eea;
+            color:white;
+            transition: 0,3s ease;
+            
+        }
+
+        .hero {
+            margin-top: 80px;
+            padding: 90px 0 50px;
+            text-align: left;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .hero-copy {
+            color: white;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            margin: 0 0 16px;
+            font-size: clamp(2.5rem, 4vw, 4.5rem);
+            line-height: 1.06;
+            text-shadow: none;
+        }
+
+        .hero h1 span {
+            color: #dfeeff;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.88);
+            max-width: 650px;
+            margin-bottom: 26px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .secondary-btn {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            background: transparent;
+            border-radius: 999px;
+            padding: 12px 22px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+        }
+
+        .profile-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 24px;
+            padding: 24px;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .avatar {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dfeeff 0%, #8fc4ff 100%);
+            color: #23395d;
+            display: grid;
+            place-items: center;
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0 auto 18px;
+            box-shadow: 0 18px 36px rgba(0,0,0,0.15);
+        }
+
+        .profile-card h3 {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .profile-card p {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            color: #1d2b3a;
+            margin-bottom: 18px;
+        }
+
+        .section-lead {
+            color: whitesmoke ;
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: rgba(255,255,255,0.8);
+            border: 1px solid rgba(119,150,183,0.16);
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 12px 25px rgba(17,24,39,0.06);
+        }
+
+        .about-card p {
+            color: #465468;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .info-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .info-list li {
+            background: #f4f8ff;
+            border: 1px solid #dfeaf7;
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: #2b3d55;
+            font-weight: 600;
+        }
+
+        .mini-card {
+            background: linear-gradient(135deg, #f4f8ff 0%, #ebf6ff 100%);
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        .mini-card h3 {
+            color: #1d2b3a;
+            margin-bottom: 10px;
+        }
+
+        .mini-card ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: #465468;
+            line-height: 1.9;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card {
+            background: rgba(255,255,255,0.85);
+            border: 1px solid rgba(119,150,183,0.18);
+            border-radius: 18px;
+            padding: 24px 22px;
+            box-shadow: 0 12px 28px rgba(17,24,39,0.06);
+        }
+
+        .skill-card h3 {
+            color: #23395d;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skill-card p {
+            color: #58677a;
+            line-height: 1.8;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card h3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .project-card .stats {
+            margin-top: 0;
+            color: #667085;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #16263d 0%, #234b72 100%);
+            border-radius: 22px;
+            padding: 36px 28px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: min(100%, 1100px);
+            margin: 0 auto;
+        }
+
+        .contact-box > div:first-child {
+            flex: 1 1 420px;
+        }
+
+        .contact-box p {
+            opacity: 0.9;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 12px 18px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+        }
+
+        @media (max-width: 860px) {
+            .hero-inner,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                padding: 14px 18px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding-top: 110px;
+            }
+
+            .contact-box {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contact-links {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="nav">
+        <nav>
+            <h1 class="logo">POR<span>TF</span>OLIO<span>.</span></h1>
+            <ul>
+                <li><a href>Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <a href="#contact" class="btn">Contact Me</a>
+        </nav>
+    </div>
+
     <div class="container">
-        <header>
-            <h1>Syed Hakim P. Pandapatan</h1>
-            <p class="subtitle">FrontEnd Developer | Mobile Developer</p>
+        <header class="hero" id="home">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <div class="eyebrow">Looking for internships & freelance</div>
+                    <h1>Syed Hakim <span>P. Pandapatan</span></h1>
+                    <p class="subtitle">
+                        I’m an aspiring developer and mobile-focused software enthusiast focused on building clean,
+                        responsive, and user-friendly digital experiences for people and businesses.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>1</strong>
+                            <span>Project Built</span>
+                        </div>
+                        <div class="stat">
+                            <strong>100%</strong>
+                            <span>Driven to Learn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="avatar">ME</div>
+                    <h3>Aspiring Developer</h3>
+                    <p>
+                        Passionate about creating polished interfaces, improving user experiences,
+                        and turning ideas into practical digital products.
+                    </p>
+                </div>
+            </div>
         </header>
 
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3>nest-mini-bank</h3>
-                <p>Banking application built with NestJS framework for MSU Students</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">NestJS</span>
-                </div>
-                <div class="stats">📁 1.2 MB • 3 forks</div>
-                <a href="https://github.com/MSU-Students/nest-mini-bank" class="project-link">View on GitHub</a>
-            </div>
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-lead">
+                I’m a student developer from Mindanao State University, currently exploring software development with a strong
+                interest in frontend, mobile, and database-driven applications. I enjoy learning new technologies and building
+                solutions that are useful, practical, and easy to use.
+            </p>
 
-            <!-- Project 5 -->
-            <div class="project-card">
-                <h3>MobileTravelGuide</h3>
-                <p>Mobile application providing travel guidance and tourism recommendations</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">Mobile</span>
-                </div>
-                <div class="stats">📁 54 KB • 1 fork</div>
-                <a href="https://github.com/SystemError-404/MobileTravelGuide" class="project-link">View on GitHub</a>
-            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <p>
+                        I have experience working with HTML, CSS, JavaScript, TypeScript, React, Next.js, and backend tools such as NestJS.
+                        My goal is to keep growing as a developer by combining design thinking, clean coding, and strong problem-solving.
+                    </p>
+                    <p>
+                        I enjoy turning ideas into real-world applications, whether it is a personal project, a learning challenge, or a platform for users.
+                    </p>
 
-            <!-- Project 6 -->
-            <div class="project-card">
-                <h3>next-app</h3>
-                <p>Next.js application showcasing modern React development practices</p>
-                <div class="tech-stack">
-                    <span class="tech-tag">TypeScript</span>
-                    <span class="tech-tag">Next.js</span>
-                    <span class="tech-tag">React</span>
+                    <ul class="info-list">
+                        <li>📍 Mindanao State University, BSIT Student</li>
+                        <li>🎯 Focus: Frontend, Mobile, and Full-Stack Learning</li>
+                        <li>💡 Interest: UI/UX, app development, and scalable solutions</li>
+                    </ul>
                 </div>
-                <div class="stats">📁 64 KB</div>
-                <a href="https://github.com/SystemError-404/next-app" class="project-link">View on GitHub</a>
+
+                <div class="mini-card">
+                    <h3>Current Focus</h3>
+                    <ul>
+                        <li>Responsive and modern frontend development</li>
+                        <li>Learning full-stack application architecture</li>
+                        <li>Improving mobile user experience and database logic</li>
+                        <li>Building real projects for problem-solving and growth</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-lead">
+                I’m continuously improving my technical skills and learning tools that help me build functional and professional digital experiences.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, TypeScript, React, Next.js, responsive UI design, and user-focused interfaces.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <p>REST APIs, server-side logic, data handling, and backend architecture using modern frameworks.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Mobile</h3>
+                    <p>Mobile app development concepts, user flows, and interface design for responsive cross-device apps.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, VS Code, UI prototyping, debugging, and project organization for collaborative work.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-lead">
+                These projects reflect my work in application development, frontend building, and practical problem solving.
+            </p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <h3>MobileTravelGuide</h3>
+                        <p>Mobile travel guide app that provides location-based recommendations and tourism insights.</p>
+                    </div>
+                    <div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Mobile</span>
+                            <span class="tech-tag">UI</span>
+                        </div>
+                        <div class="stats">📁 54 KB </div>
+                        <a href="https://github.com/SystemError-404/MobileTravelGuide" class="project-link" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>Coming Soon</h3>
+                        <p>...........................</p>
+                    </div>
+                    <div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">...</span>
+                            <span class="tech-tag">...</span>
+                            <span class="tech-tag">...</span>
+                        </div>
+                        <div class="stats">...</div>
+                        <a href="#projects" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                         <h3>Coming Soon</h3>
+                        <p>...........................</p>
+                    </div>
+                    <div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">...</span>
+                            <span class="tech-tag">...</span>
+                            <span class="tech-tag">...</span>
+                        </div>
+                        <div class="stats">...</div>
+                        <a href="#projects" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-box">
+                <div>
+                    <h2 class="section-title" style="color: white; margin-bottom: 8px;">Let’s build something great.</h2>
+                    <p>I’m open to collaboration, internship opportunities, and meaningful project work.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="https://github.com/SystemError-404" target="_blank">GitHub</a>
+                    <a href="mailto:pandapatan.sp21@s.msumain.edu.ph">Email Me</a>
+                </div>
+            </div>
+        </section>
 
         <footer>
-            <p>🔗 Connect with me:</p>
-            <a href="https://github.com/SystemError-404" target="_blank">GitHub</a>
+            <p>Made with passion for clean design and practical development.</p>
         </footer>
     </div>
 </body>
